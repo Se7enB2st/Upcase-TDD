@@ -1,13 +1,10 @@
 require 'rails_helper'
 
-
 feature "User completes todo" do
   scenario "successfully" do
     sign_in
 
-    click_on "Add a new todo"
-    fill_in "Title", with: "Working Out"
-    click_on "Submit"
+    create_todo("Working Out")
 
     click_on "Complete!"
 
