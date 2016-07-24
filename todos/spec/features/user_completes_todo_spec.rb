@@ -8,6 +8,6 @@ feature "User completes todo" do
 
     click_on "Complete!"
 
-    expect(page).to have_css '.todos li.completed', text: 'Working Out'
+    expect(page).to display_completed_todo "Working Out"
   end
 end
